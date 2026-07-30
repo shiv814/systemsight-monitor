@@ -1,0 +1,10 @@
+[project]
+name = "systemsight"
+version = "1.0.0"
+description = "Cross-platform system health monitor and alert evaluator"
+requires-python = ">=3.10"
+dependencies = ["psutil>=5.9"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
