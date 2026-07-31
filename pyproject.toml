@@ -1,10 +1,18 @@
 [project]
 name = "systemsight"
-version = "1.0.0"
-description = "Cross-platform system health monitor and alert evaluator"
+version = "2.0.0"
+description = "Cross-platform system observability, history, anomaly detection, and alerting toolkit"
 requires-python = ">=3.10"
 dependencies = ["psutil>=5.9"]
+authors = [{name = "Shivam Patel"}]
+license = {text = "MIT"}
+keywords = ["monitoring", "observability", "prometheus", "psutil", "alerting"]
+
+[project.scripts]
+systemsight = "systemsight.cli:main"
+systemsight-server = "systemsight.server:main"
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
 testpaths = ["tests"]
+addopts = "-q"
